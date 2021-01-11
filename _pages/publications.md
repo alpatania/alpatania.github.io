@@ -6,10 +6,9 @@ bg_img: 'https://alpatania.github.io/images/bg_publications.png'
 author_profile: true
 ---
 
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
-{% endif %}
 
+  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
+  
 {% include base_path %}
 
   <ul>{% for post in site.publications reversed %}
