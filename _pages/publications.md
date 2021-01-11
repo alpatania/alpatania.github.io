@@ -7,7 +7,7 @@ author_profile: true
 ---
 
 
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
+
   
 {% include base_path %}
 
@@ -18,3 +18,5 @@ author_profile: true
   <ul>{% for post in collections.pre-print reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
+
+ * You can also find a list of my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
