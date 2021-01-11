@@ -19,4 +19,4 @@ author_profile: true
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-<p> You can also find a list of my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u></p>
+<p style="font-size:10px"> You can also find a list of my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u></p>
