@@ -14,9 +14,11 @@ author_profile: true
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
+  
+  <p> Pre-prints </p>
 
   <ul>{% for post in site.pre-print reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-<p style="font-size:10px"> You can also find a list of my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u></p>
+<p style="font-size:15px"> You can also find a list of my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u></p>
