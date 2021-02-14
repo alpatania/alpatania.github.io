@@ -15,7 +15,7 @@ author_profile: true
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-  <ul>{% for post in collections.pre-print reversed %}
+  <ul>{% for post in site.pre-print reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
