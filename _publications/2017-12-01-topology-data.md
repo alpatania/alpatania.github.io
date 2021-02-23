@@ -1,6 +1,6 @@
 ---
 title: "Topological analysis of data"
-collection: publications
+label: publications
 permalink: /publication/2017-12-01-topology-data
 excerpt: 'An editorial where we briefly present the TDA paradigm and some applications, in order to highlight its relevance to the data science community.'
 date: 2017-12-01
