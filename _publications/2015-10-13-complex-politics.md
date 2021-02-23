@@ -1,6 +1,6 @@
 ---
 title: "Complex politics: A quantitative semantic and topological analysis of uk house of commons debates."
-collection: pre-prints
+label: pre-prints
 permalink: /publication/2015-10-13-complex-politics
 excerpt: 'An exploratory attempt to use quantitative semantics techniques and topological analysis to analyze systemic patterns arising in a complex political system.'
 date: 2015-10-13
