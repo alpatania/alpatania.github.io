@@ -1,6 +1,6 @@
 ---
 title: "Topological gene-expression networks recapitulate brain anatomy and function."
-collection: publications
+label: publications
 permalink: /publication/2019-06-15-mapper-AHBA
 excerpt: 'We present a pipeline based on Mapper to analyze genes co-expression data. We find that co-expression networks produced by Mapper returned a structure that matches the well-known anatomy of the dopaminergic pathway.'
 date: 2019-06-15
