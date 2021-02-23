@@ -19,7 +19,7 @@ author_profile: true
   
   <p> Pre-prints </p>
 
-  <ul>{% for post in site.pre-print reversed %}  
+  <ul>{% for post in site.publications reversed %}  
     {% if post.collection == "pre-prints"%}  
       {% include archive-single-cv.html %}  
     {% endif %}  
