@@ -24,10 +24,6 @@ comments:
     shortname            :
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
   branch                 : "gh-pages" # "master", "gh-pages"
@@ -85,32 +81,12 @@ author:
   employer         : "Network Science Institute"
   googlescholar    : "https://scholar.google.it/citations?user=Cv-w3LIAAAAJ&hl=en"
   email            : "apatania{at}iu{dot}edu"
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
   github           : "alpatania"
-  google_plus      :
-  keybase          :
-  instagram        :
-  lastfm           :
   linkedin         :
   orcid            : "https://orcid.org/0000-0002-3047-4376"
-  pinterest        :
-  soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
-  tumblr           :
   twitter          : "@AlicePatania"
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
-  wikipedia        :
-#  publons          : "https://publons.com/researcher/1645780/alice-patania/"
+  publons          : "https://publons.com/researcher/1645780/alice-patania/"
 
 # Reading Files
 include:
