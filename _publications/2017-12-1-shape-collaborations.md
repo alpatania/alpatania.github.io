@@ -1,6 +1,6 @@
 ---
 title: "The shape of collaborations."
-collection: publications
+label: publications
 permalink: /publication/2017-12-1-shape-collaborations
 excerpt: 'A study on the structure of scientific collaborations using simplicial descriptions of publications. We extend the concept of triadic closure to simplicial complexes and introduce a new way of dealing with large simplex sizes when computing homology. '
 date: 2017-12-1
