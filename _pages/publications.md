@@ -12,13 +12,17 @@ author_profile: true
 {% include base_path %}
 
   <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
+    {% if post.collection == 'publications'%}
+      {% include archive-single-cv.html %}
+    {% endif %}
   {% endfor %}</ul>
   
   <p> Pre-prints </p>
 
   <ul>{% for post in site.pre-print reversed %}
-    {% include archive-single-cv.html %}
+    {% if post.collection == 'pre-prints'%}
+      {% include archive-single-cv.html %}
+    {% endif %}
   {% endfor %}</ul>
 
 <p style="font-size:15px"> You can also find a full list of my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u></p>
