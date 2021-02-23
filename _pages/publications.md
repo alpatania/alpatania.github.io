@@ -12,7 +12,7 @@ author_profile: true
 {% include base_path %}
 
   <ul>{% for post in site.publications reversed %}  
-    {% if post.collection == "publications"%}  
+    {% if post.label == "publications"%}  
       {% include archive-single-cv.html %}  
     {% endif %}  
   {% endfor %}</ul>  
@@ -20,7 +20,7 @@ author_profile: true
   <p> Pre-prints </p>
 
   <ul>{% for post in site.publications reversed %}  
-    {% if post.collection == "pre-prints"%}  
+    {% if post.label == "pre-prints"%}  
       {% include archive-single-cv.html %}  
     {% endif %}  
   {% endfor %}</ul>  
