@@ -1,6 +1,6 @@
 ---
 title: "Navigating features: a topologically informed chart of electromyographic features space."
-collection: publications
+label: publications
 permalink: /publication/2017-10-04-mapper-EMG
 date: 2017-10-04
 venue: 'Journal of The Royal Society Interface, 14(137)'
