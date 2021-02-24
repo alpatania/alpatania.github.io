@@ -8,7 +8,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-<p style = "font-weight: 400;">I am a computational topologist and my main focus is to develop and apply new topological approaches to study complex systems. Currently, I apply these techniques to brain and social networks but you can take a look at my full CV <a href="https://alpatania.github.io/cv/"> here</a>!</p>
+<p style = "font-weight: 400;">I am a computational topologist and my research focus is to develop and apply new topological approaches to study complex systems. Currently, I apply these techniques to brain and social networks but you can take a look at my full CV <a href="https://alpatania.github.io/cv/"> here</a>, if you are curious about the different kind of work I have done.</p>
 
 <p style = "font-weight: 400;">I am currently an Assistant Research Scientist at <a href = "http://iuni.iu.edu/">Indiana University Network Science Institute (IUNI)</a> in Bloomington (IN) and external faculty of the <a href="https://vermontcomplexsystems.org/">Vermont Complex Systems Center</a>. I am a Principal Investigator of an R21 NIH grant on "Integrative Predictive Modeling of Alzheimer's Disease" for which I develop models for the joint analysis of genomics and neuroimaging data. On a daily basis, I work on mathematical modelling for brain networks in close collaboration with Olaf Sporns and his team.</p>
 
