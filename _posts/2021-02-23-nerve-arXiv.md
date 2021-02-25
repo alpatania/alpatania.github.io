@@ -8,6 +8,8 @@ tags:
   - pre-print
 ---
 
+<script src=”https://d3js.org/d3.v3.min.js"></script>
+
 
 <a href="https://arxiv.org/abs/2102.11437"> Nerve theorems for fixed points of neural networks</a>  
 
@@ -16,6 +18,12 @@ tags:
 </p> 
 
 ## What are CTLNs?
+
+<form method=”post” >
+  <input type=”number” name=”delta” placeholder=”delta” > 
+  <input type=”number” name=”epsilon” placeholder=”epsilon” >
+  <input type=”submit” value=”Refresh” > 
+</form>
 
 ## Fixed points
 
