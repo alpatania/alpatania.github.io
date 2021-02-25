@@ -8,6 +8,16 @@ tags:
   - pre-print
 ---
 
+
+<style>
+
+div.example {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+</style>
+
+
 <a href="https://arxiv.org/abs/2102.11437"> Nerve theorems for fixed points of neural networks</a>  
 
 <p>
@@ -71,7 +81,7 @@ var offset = 0,
     speed = 4,
     start = Date.now();
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("div#example").append("svg")
     .attr("width", width)
     .attr("height", height)
   .append("g")
@@ -155,5 +165,5 @@ d3.timer(function() {
 
 </script>
 
-<body>
-</body>
+<div id="example">
+</div>
