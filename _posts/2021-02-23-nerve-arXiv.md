@@ -16,7 +16,8 @@ tags:
 
 <form>
   <input type="number" name="delta" id="delta" min="0"  step="any"> 
-  <input type="number" name="epsilon" id="epsilon" min="0" max=document.getElementById("delta").value  step="any">
+  var x = document.getElementById("delta").value;
+  <input type="number" name="epsilon" id="epsilon" min="0" max=x  step="any">
   <input type="submit" value="Refresh" > 
 </form>
 
