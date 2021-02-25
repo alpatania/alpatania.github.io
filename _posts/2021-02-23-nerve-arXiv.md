@@ -42,7 +42,7 @@ div.example {
 .box line,
 .box rect,
 .box circle {
-  fill: #fff;
+  fill: #111;
   stroke: #000;
   stroke-width: 1.5px;
 }
