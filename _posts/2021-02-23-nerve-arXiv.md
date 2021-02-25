@@ -14,13 +14,20 @@ tags:
 
 ## What are CTLNs?
 
-<form>
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+<input type="range" id="a" value="50">
++<input type="number" id="b" value="25">
+=<output name="x" for="a b"></output>
+</form>
+
+<form oninput="emax.value=parseInt(delta.value)/(parseInt(delta.value)+1)">
+   <label for="delta">delta:</label>
  <input type="number" name="delta" id="delta" min="0"  step="any"> 
-  <input type="number" name="epsilon" id="epsilon" min="0" max=delta.value  step="any">
+   <label for="epsilon">epsilon:</label>
+  <input type="number" name="epsilon" id="epsilon" min="0" max=emax.value  step="any">
   
   <input type="range" name="delta" id="delta" min="0" max="100" step="any">
-  <output for="delta" onforminput="value = delta.valueAsNumber;"></output>
-  <input type="range" name="epsilon" id="epsilon" min="0" max=value  step="any">
+  <input type="range" name="epsilon" id="epsilon" min="0" max=parseInt(delta.value)/(parseInt(delta.value)+1)  step="any">
   
   
   <input type="submit" value="Refresh" > 
