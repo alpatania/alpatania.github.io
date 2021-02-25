@@ -54,9 +54,9 @@ path {
 </form>
 
 <form>
-  <input type=”number” name=”delta” id=”delta” > 
-  <input type=”number” name=”epsilon” id=”epsilon” >
-  <input type=”submit” value=”Refresh” > 
+  <input type="number" name="delta" id="delta" min="0" value="2" > 
+  <input type="number" name="epsilon" id="epsilon" min="0" max="0.66" >
+  <input type="submit" value="Refresh" > 
 </form>
 
 <script>
