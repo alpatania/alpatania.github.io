@@ -24,7 +24,7 @@ tags:
    <label for="delta">delta:</label>
  <input type="number" name="delta" id="delta" min="0"  step="any"> 
    <label for="epsilon">epsilon:</label>
-  <input type="number" name="epsilon" id="epsilon" min="0" max=emax.value  step="any">
+  <input type="number" name="epsilon" id="epsilon" min="0" max=parseInt(delta.value)  step="any">
   
   <input type="range" name="delta" id="delta" min="0" max="100" step="any">
   <input type="range" name="epsilon" id="epsilon" min="0" max=parseInt(delta.value)/(parseInt(delta.value)+1)  step="any">
