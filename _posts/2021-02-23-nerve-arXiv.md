@@ -19,7 +19,7 @@ tags:
   <input type="number" name="epsilon" id="epsilon" min="0" max=x  step="any">!-->
   
   <input type="range" name="delta" id="delta" min="0" max="100" step="any">
-  <input type="range" name="epsilon" id="epsilon" min="0" max="1"  step="any">
+  <input type="range" name="epsilon" id="epsilon" min="0" max=delta.value  step="any">
   
   <input type="submit" value="Refresh" > 
 </form>
