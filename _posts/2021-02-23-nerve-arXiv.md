@@ -124,4 +124,6 @@ function iqr(k) {
 
 </script>
 
-<div id="example"></div>
+<div id="example">
+ggg
+</div>
