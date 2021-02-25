@@ -16,6 +16,12 @@ tags:
 
 ## What are CTLNs?
 
+<form>
+  <input type="number" name="delta" id="delta" min="0" value="2" > 
+  <input type="number" name="epsilon" id="epsilon" min="0" max="0.66" >
+  <input type="submit" value="Refresh" > 
+</form>
+
 ## Fixed points
 
 ## The idea of a nerve
@@ -51,12 +57,6 @@ path {
   <label for="ref-planet">Planets</label><br>
   <input type="radio" name="reference" id="ref-sun">
   <label for="ref-sun">Sun</label>
-</form>
-
-<form>
-  <input type="number" name="delta" id="delta" min="0" value="2" > 
-  <input type="number" name="epsilon" id="epsilon" min="0" max="0.66" >
-  <input type="submit" value="Refresh" > 
 </form>
 
 <script>
@@ -154,3 +154,6 @@ d3.timer(function() {
 });
 
 </script>
+
+<body>
+</body>
