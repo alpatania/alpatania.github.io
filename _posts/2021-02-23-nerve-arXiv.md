@@ -8,7 +8,9 @@ tags:
   - pre-print
 ---
 
+{% raw %}
 <script src=”https://d3js.org/d3.v3.min.js"></script>
+{% endraw %}
 
 
 <a href="https://arxiv.org/abs/2102.11437"> Nerve theorems for fixed points of neural networks</a>  
@@ -19,11 +21,13 @@ tags:
 
 ## What are CTLNs?
 
+{% raw %}
 <form method=”post” >
   <input type=”number” name=”delta” placeholder=”delta” > 
   <input type=”number” name=”epsilon” placeholder=”epsilon” >
   <input type=”submit” value=”Refresh” > 
 </form>
+{% endraw %}
 
 ## Fixed points
 
