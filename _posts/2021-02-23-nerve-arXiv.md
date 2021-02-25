@@ -16,14 +16,6 @@ tags:
 
 ## What are CTLNs?
 
-{% raw %}
-<form method=”post” >
-  <input type=”number” name=”delta” placeholder=”delta” > 
-  <input type=”number” name=”epsilon” placeholder=”epsilon” >
-  <input type=”submit” value=”Refresh” > 
-</form>
-{% endraw %}
-
 ## Fixed points
 
 ## The idea of a nerve
@@ -59,6 +51,12 @@ path {
   <label for="ref-planet">Planets</label><br>
   <input type="radio" name="reference" id="ref-sun">
   <label for="ref-sun">Sun</label>
+</form>
+
+<form>
+  <input type=”number” name=”delta” id=”delta” > 
+  <input type=”number” name=”epsilon” id=”epsilon” >
+  <input type=”submit” value=”Refresh” > 
 </form>
 
 <script>
