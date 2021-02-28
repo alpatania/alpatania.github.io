@@ -99,77 +99,75 @@ div.example {
 	.style('stroke-width', '3px')
   </script>
 
-<!--
 <script>
 
-var margin = {top: 10, right: 50, bottom: 20, left: 50},
-    width = 120 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
-
-var min = Infinity,
-    max = -Infinity;
-
-var chart = d3.box()
-    .whiskers(iqr(1.5))
-    .width(width)
-    .height(height);
-
-d3.csv("/morley.csv", function(error, csv) {
-  var data = [];
-
-  csv.forEach(function(x) {
-    var e = Math.floor(x.Expt - 1),
-        r = Math.floor(x.Run - 1),
-        s = Math.floor(x.Speed),
-        d = data[e];
-    if (!d) d = data[e] = [s];
-    else d.push(s);
-    if (s > max) max = s;
-    if (s < min) min = s;
-  });
-
-  chart.domain([min, max]);
-
-  var svg = d3.select("#example").selectAll("svg") 
-      .data(data)
-    .enter().append("svg")
-      .attr("class", "box")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.bottom + margin.top)
-    .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-      .call(chart);
-
-  setInterval(function() {
-    svg.datum(randomize).call(chart.duration(1000));
-  }, 2000);
-});
-
-function randomize(d) {
-  if (!d.randomizer) d.randomizer = randomizer(d);
-  return d.map(d.randomizer);
+function createNetwork() {
+  var nodeHash = {};
+  var edgeHash = {};
+  var nodes = [];
+  var edges = [];
+  
+  nodeHash['1'] = {id: '1', label: '1'};
+  nodeHash['2'] = {id: '2', label: '2'};
+  nodeHash['3'] = {id: '3', label: '3'};
+  nodes.push(nodeHash['1']);
+  nodes.push(nodeHash['2']);
+  nodes.push(nodeHash['3']);
+  
+  var newEdge = {source: nodeHash['1'], target: nodeHash['2'], weight: '4'};
+  edgeHash["1" + "-" + "2"] = newEdge;
+  edges.push(newEdge);
+	
+  var newEdge = {source: nodeHash['2'], target: nodeHash['3'], weight: '4'};
+  edgeHash["2" + "-" + "3"] = newEdge;
+  edges.push(newEdge);
+  
+ //is it reciprocal?
+  createForceNetwork(nodes, edges);
 }
 
-function randomizer(d) {
-  var k = d3.max(d) * .02;
-  return function(d) {
-    return Math.max(min, Math.min(max, d + k * (Math.random() - .5)));
-  };
-}
+function createForceNetwork(nodes, edges) {
 
-// Returns a function to compute the interquartile range.
-function iqr(k) {
-  return function(d, i) {
-    var q1 = d.quartiles[0],
-        q3 = d.quartiles[2],
-        iqr = (q3 - q1) * k,
-        i = -1,
-        j = d.length;
-    while (d[++i] < q1 - iqr);
-    while (d[--j] > q3 + iqr);
-    return [i, j];
-  };
-}
+//create a network from an edgelist
 
+  var force = d3.layout.force().nodes(nodes).links(edges)
+  .size([500,500])
+  .charge(-200)
+  .on("tick", updateNetwork);
+
+  d3.select("#example").selectAll("line")
+  .data(edges)
+  .enter()
+  .append("line")
+  .style("stroke-width", "2px")
+  .style("stroke", function (d) {return d.reciprocal ? "#66CCCC" : "#996666"});
+
+  d3.select("#example").selectAll("circle")
+  .data(nodes)
+  .enter()
+  .append("circle")
+  .style("fill", "#FFFF99")
+  .style("stroke", "#666633")
+  .style("stroke-width", "1px")
+  .attr("r", 5)
+  .call(force.drag());
+
+  force.start();
+
+  function updateNetwork() {
+    d3.select("#example").selectAll("line")
+      .attr("x1", function (d) {return d.source.x})
+      .attr("x2", function (d) {return d.target.x})
+      .attr("y1", function (d) {return d.source.y})
+      .attr("y2", function (d) {return d.target.y});
+
+    d3.select("#example").selectAll("circle")
+      .attr("cx", function (d) {return d.x})
+      .attr("cy", function (d) {return d.y});
+  }
+
+
+
+}
+createNetwork() ;
 </script>
--->
