@@ -78,11 +78,28 @@ div.example {
 
 \\ this is where it should appear
 
-<div id='example'> // id="example" and change to div#example
+<div id='example'>
 </div>
 
 \\  here starts the js script
 
+<script>
+  var width = 400, height = 400;
+  var svg = d3.select('#example')
+		.append('svg')
+		.attr('width', width)
+		.attr('height', height);
+  
+  var vectorcircle = svg.append('circle')
+	.attr('cx', width/2)
+	.attr('cy', height/2)
+	.attr('r', 100)
+	.style('fill', 'orange')
+	.style('stroke', 'blue')
+	.style('stroke-width', '3px')
+  </script>
+
+<!--
 <script>
 
 var margin = {top: 10, right: 50, bottom: 20, left: 50},
@@ -155,3 +172,4 @@ function iqr(k) {
 }
 
 </script>
+-->
