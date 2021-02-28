@@ -83,7 +83,7 @@ div.example {
 
 \\  here starts the js script
 
-<script>
+<!--<script>
   var width = 400, height = 400;
   var svg = d3.select('#example')
 		.append('svg')
@@ -97,9 +97,14 @@ div.example {
 	.style('fill', 'orange')
 	.style('stroke', 'blue')
 	.style('stroke-width', '3px')
-  </script>
+  </script>-->
 
 <script>
+  var width = 400, height = 400;
+  var svg = d3.select('#example')
+		.append('svg')
+		.attr('width', width)
+		.attr('height', height);
 
 function createNetwork() {
   var nodeHash = {};
@@ -135,14 +140,14 @@ function createForceNetwork(nodes, edges) {
   .charge(-200)
   .on("tick", updateNetwork);
 
-  d3.select("#example").selectAll("line")
+  svg.selectAll("line")
   .data(edges)
   .enter()
   .append("line")
   .style("stroke-width", "2px")
   .style("stroke", function (d) {return d.reciprocal ? "#66CCCC" : "#996666"});
 
-  d3.select("#example").selectAll("circle")
+  svg.selectAll("circle")
   .data(nodes)
   .enter()
   .append("circle")
@@ -155,13 +160,13 @@ function createForceNetwork(nodes, edges) {
   force.start();
 
   function updateNetwork() {
-    d3.select("#example").selectAll("line")
+    svg.selectAll("line")
       .attr("x1", function (d) {return d.source.x})
       .attr("x2", function (d) {return d.target.x})
       .attr("y1", function (d) {return d.source.y})
       .attr("y2", function (d) {return d.target.y});
 
-    d3.select("#example").selectAll("circle")
+    svg.selectAll("circle")
       .attr("cx", function (d) {return d.x})
       .attr("cy", function (d) {return d.y});
   }
