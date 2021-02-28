@@ -38,6 +38,8 @@ We know that if a subgroup of nodes of the network don't allow a fixed point, th
 
 ## The Theorems
 
+// defining a new div class
+
 <style>
 
 div.example {
@@ -67,12 +69,19 @@ div.example {
 
 </style>
 
+// loading outside scripts
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://bl.ocks.org/mbostock/raw/4061502/0a200ddf998aa75dfdb1ff32e16b680a15e5cb01/box.js"></script>
+// <script src="http://bl.ocks.org/mbostock/raw/4061502/0a200ddf998aa75dfdb1ff32e16b680a15e5cb01/box.js"></script>
   
-  <div id="example">
-  </div>
+
+// this is where it should appear
+
+<div> // id="example" and change to div#example
+</div>
+
+//  here starts the js script
+
 <script>
 
 var margin = {top: 10, right: 50, bottom: 20, left: 50},
@@ -103,7 +112,7 @@ d3.csv("/morley.csv", function(error, csv) {
 
   chart.domain([min, max]);
 
-  var svg = d3.select("div#example").selectAll("svg")
+  var svg = d3.select("div").selectAll("svg") 
       .data(data)
     .enter().append("svg")
       .attr("class", "box")
