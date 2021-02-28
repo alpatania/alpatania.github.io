@@ -32,13 +32,14 @@ The dynamics is defined on the nodes of the network by the following ordinary di
 
 ## The idea of a nerve
 <p>
-  Directional graphs are graph where we can isolate all the possible subroups of nodes that can support fixed points.</br>
+  Directional graphs are graph where we can isolate all the possible subroups of nodes that can support fixed points.<\br>
 Knowing which nodes can support fixed points give an intuition of where the dynamics of a network will flow.
 We know that if a subgroup of nodes of the network don't allow a fixed point, then the dynamics will never stall in them and will try to always move away from them. </p>
 
 ## The Theorems
 
-// defining a new div class
+<!--
+\\ defining a new div class
 
 <style>
 
@@ -67,20 +68,20 @@ div.example {
   stroke: #ccc;
 }
 
-</style>
+</style>-->
 
-// loading outside scripts
+\\ loading outside scripts
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
-// <script src="http://bl.ocks.org/mbostock/raw/4061502/0a200ddf998aa75dfdb1ff32e16b680a15e5cb01/box.js"></script>
+<!--<script src="http://bl.ocks.org/mbostock/raw/4061502/0a200ddf998aa75dfdb1ff32e16b680a15e5cb01/box.js"></script>-->
   
 
-// this is where it should appear
+\\ this is where it should appear
 
-<div> // id="example" and change to div#example
+<div id='example'> // id="example" and change to div#example
 </div>
 
-//  here starts the js script
+\\  here starts the js script
 
 <script>
 
@@ -112,7 +113,7 @@ d3.csv("/morley.csv", function(error, csv) {
 
   chart.domain([min, max]);
 
-  var svg = d3.select("div").selectAll("svg") 
+  var svg = d3.select("#example").selectAll("svg") 
       .data(data)
     .enter().append("svg")
       .attr("class", "box")
