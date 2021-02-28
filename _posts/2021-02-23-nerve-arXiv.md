@@ -21,7 +21,7 @@ tags:
 </p> 
 
 ## What are CTLNs?
-<p>Combinatorial threshold-linear networks (CTLNs) are competitive TLNs where the matrix W is determined by a graph G.<br/>
+<p>Combinatorial threshold-linear networks (CTLNs) are competitive TLNs where the matrix W is determined by a graph G.
 The dynamics is defined on the nodes of the network by the following ordinary differential equation:
 </p>
 
@@ -32,7 +32,7 @@ The dynamics is defined on the nodes of the network by the following ordinary di
 
 ## The idea of a nerve
 <p>
-  Directional graphs are graph where we can isolate all the possible subroups of nodes that can support fixed points.<br\>
+  Directional graphs are graph where we can isolate all the possible subroups of nodes that can support fixed points.</br>
 Knowing which nodes can support fixed points give an intuition of where the dynamics of a network will flow.
 We know that if a subgroup of nodes of the network don't allow a fixed point, then the dynamics will never stall in them and will try to always move away from them. </p>
 
