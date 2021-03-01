@@ -96,11 +96,11 @@ div.example {
 
 <script>
 var datapoints = [
-  {'name': 'New York', 'x': 19, 'y': 19	},
-  {'name': 'Texas', 'x': 26, 'y': 26 },
-  {'name': 'California', 'x': 38, 'y': 38 },
-  {'name': 'Florida', 'x': 20, 'y': 20 },
-  {'name': 'Illinois', 'x': 12, 'y': 12	}
+  {'name': 'New York', 'x': 10, 'y': 10	},
+  {'name': 'Texas', 'x': 10, 'y': 20 },
+  {'name': 'California', 'x': 0, 'y': 30 },
+  {'name': 'Florida', 'x': 20, 'y': 30 },
+  {'name': 'Illinois', 'x': 10, 'y': 40	}
 ];
 
 var svg = d3.select('svg');
@@ -110,9 +110,9 @@ var rectangles = svg.selectAll('circle')
                     .append('circle')
                     .attr('cx', function(d) { return d['x'] * 3 ; })
                     .attr('cy', function(d) { return d['y'] * 3 ; })
-                    .attr('r', 20)
+                    .attr('r', 5)
 		    .style('fill', 'orange')
-		    .style('stroke', 'blue')
-		    .style('stroke-width', '3px')
+		    .style('stroke', 'orange')
+		    .style('stroke-width', '2px')
 
 </script>
