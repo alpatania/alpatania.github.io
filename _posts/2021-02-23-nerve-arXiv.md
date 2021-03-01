@@ -96,22 +96,24 @@ div.example {
 
 <script>
 var datapoints = [
-  {'name': 'New York', 'population': 19	},
-  {'name': 'Texas', 'population': 26 },
-  {'name': 'California', 'population': 38 },
-  {'name': 'Florida', 'population': 20 },
-  {'name': 'Illinois', 'population': 12	}
+  {'name': 'New York', 'x': 19, 'y': 19	},
+  {'name': 'Texas', 'x': 26, 'y': 26 },
+  {'name': 'California', 'x': 38, 'y': 38 },
+  {'name': 'Florida', 'x': 20, 'y': 20 },
+  {'name': 'Illinois', 'x': 12, 'y': 12	}
 ];
 
 var svg = d3.select('svg');
-var rectangles = svg.selectAll('rect')
+var rectangles = svg.selectAll('circle')
                     .data(datapoints)
                     .enter()
-                    .append('rect')
-                    .attr('x', 75)
-                    .attr('y', function(d, i) { return i * 30; })
-                    .attr('height', 20)
-                    .attr('width', function(d) { return d['population'] * 3 ; });
+                    .append('circle')
+                    .attr('cx', function(d) { return d['x'] * 3 ; })
+                    .attr('cy', function(d) { return d['y'] * 3 ; })
+                    .attr('r', 20)
+		    .style('fill', 'orange')
+		    .style('stroke', 'blue')
+		    .style('stroke-width', '3px')
 
 var annotations = svg.selectAll('text')
                     .data(datapoints)
