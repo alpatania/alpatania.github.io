@@ -112,6 +112,13 @@ var edges = [
   {'source': '5', 'target': '1', 'weight':20}
 ];
 
+d3.select("svg").selectAll("line")
+  .data(edges)
+  .enter()
+  .append("line")
+  .style("stroke-width", "2px")
+  .style("stroke", function (d) {return d.reciprocal ? "#66CCCC" : "#996666"});
+  
 createForceNetwork(nodes, edges);
 
 function createForceNetwork(nodes, edges) {
