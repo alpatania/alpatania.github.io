@@ -70,18 +70,11 @@ div.example {
 
 </style>-->
 
-\\ loading outside scripts
-
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <!--<script src="http://bl.ocks.org/mbostock/raw/4061502/0a200ddf998aa75dfdb1ff32e16b680a15e5cb01/box.js"></script>-->
-  
-
-\\ this is where it should appear
 
 <div id='example'>
 </div>
-
-\\  here starts the js script
 
 <!--<script>
   var width = 400, height = 400;
@@ -100,11 +93,8 @@ div.example {
   </script>-->
 
 <script>
-  var width = 400, height = 400;
   var svg = d3.select('#example')
 		.append('svg')
-		.attr('width', width)
-		.attr('height', height);
 
 function createNetwork() {
   var nodeHash = {};
@@ -112,18 +102,18 @@ function createNetwork() {
   var nodes = [];
   var edges = [];
   
-  nodeHash['1'] = {id: '1', label: '1'};
-  nodeHash['2'] = {id: '2', label: '2'};
-  nodeHash['3'] = {id: '3', label: '3'};
-  nodes.push(nodeHash['1']);
-  nodes.push(nodeHash['2']);
-  nodes.push(nodeHash['3']);
+  nodeHash["1"] = {id: "1", label: "1"};
+  nodeHash["2"] = {id: "2", label: "2"};
+  nodeHash["3"] = {id: "3", label: "3"};
+  nodes.push(nodeHash["1"]);
+  nodes.push(nodeHash["2"]);
+  nodes.push(nodeHash["3"]);
   
-  var newEdge = {source: nodeHash['1'], target: nodeHash['2'], weight: '4'};
+  var newEdge = {source: nodeHash["1"], target: nodeHash["2"], weight: "10"};
   edgeHash["1" + "-" + "2"] = newEdge;
   edges.push(newEdge);
 	
-  var newEdge = {source: nodeHash['2'], target: nodeHash['3'], weight: '4'};
+  var newEdge = {source: nodeHash["2"], target: nodeHash["3"], weight: "10"};
   edgeHash["2" + "-" + "3"] = newEdge;
   edges.push(newEdge);
   
