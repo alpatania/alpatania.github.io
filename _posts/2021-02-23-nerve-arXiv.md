@@ -102,9 +102,9 @@ function createNetwork() {
   var nodes = [];
   var edges = [];
   
-  nodeHash["1"] = {id: "1", label: "1"};
-  nodeHash["2"] = {id: "2", label: "2"};
-  nodeHash["3"] = {id: "3", label: "3"};
+  nodeHash["1"] = {'id': "1", 'label': "1"};
+  nodeHash["2"] = {'id': "2", 'label': "2"};
+  nodeHash["3"] = {'id': "3", 'label': "3"};
   nodes.push(nodeHash["1"]);
   nodes.push(nodeHash["2"]);
   nodes.push(nodeHash["3"]);
