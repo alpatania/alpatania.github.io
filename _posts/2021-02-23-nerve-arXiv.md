@@ -96,11 +96,11 @@ div.example {
 
 <script>
 var datapoints = [
-  {'name': 'New York', 'x': 10, 'y': 10	},
-  {'name': 'Texas', 'x': 10, 'y': 20 },
-  {'name': 'California', 'x': 0, 'y': 30 },
-  {'name': 'Florida', 'x': 20, 'y': 30 },
-  {'name': 'Illinois', 'x': 10, 'y': 40	}
+  {'name': 'New York', 'x': 110, 'y': 10	},
+  {'name': 'Texas', 'x': 110, 'y': 20 },
+  {'name': 'California', 'x': 100, 'y': 30 },
+  {'name': 'Florida', 'x': 120, 'y': 30 },
+  {'name': 'Illinois', 'x': 110, 'y': 40	}
 ];
 
 var svg = d3.select('svg');
@@ -112,7 +112,22 @@ var rectangles = svg.selectAll('circle')
                     .attr('cy', function(d) { return d['y'] * 3 ; })
                     .attr('r', 5)
 		    .style('fill', 'orange')
-		    .style('stroke', 'orange')
-		    .style('stroke-width', '2px')
+		    .style("opacity", 0.5)
+		  
+var edges = [
+  {'start': 'New York','end': 'Texas', 'x': 110, 'y': 10	},
+  {'start': 'Texas','end': 'California', 'x': 110, 'y': 20 },
+  {'start': 'California','end': 'Florida', 'x': 100, 'y': 30 },
+  {'start': 'Florida','end': 'Illinois', 'x': 120, 'y': 30 },
+  {'start': 'Illinois','end': 'New York', 'x': 110, 'y': 40	}
+];
+		  
+var rectangles = svg.selectAll('line')
+  .data(edges)
+  .enter()
+  .append("line")
+  .style("stroke-width", "1px")
+  .style("stroke", "#CC9999")
+  .attr("marker-end", "url(#Triangle)");
 
 </script>
