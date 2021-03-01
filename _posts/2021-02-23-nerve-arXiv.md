@@ -73,10 +73,10 @@ div.example {
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <!--<script src="http://bl.ocks.org/mbostock/raw/4061502/0a200ddf998aa75dfdb1ff32e16b680a15e5cb01/box.js"></script>-->
 
+<!--<script>
 <div id='example'>
 </div>
 
-<!--<script>
   var width = 400, height = 400;
   var svg = d3.select('#example')
 		.append('svg')
@@ -92,63 +92,35 @@ div.example {
 	.style('stroke-width', '3px')
   </script>-->
 
-<div>
 <svg height="200" width="500"></svg>
-</div>
-
 
 <script>
-	
-var nodes = [
-  {'id': '1', 'label': '1' },
-  {'id': '2', 'label': '2' },
-  {'id': '3', 'label': '3' },
-  {'id': '4', 'label': '4' },
-  {'id': '5', 'label': '5'}
+var datapoints = [
+  {'name': 'New York', 'population': 19	},
+  {'name': 'Texas', 'population': 26 },
+  {'name': 'California', 'population': 38 },
+  {'name': 'Florida', 'population': 20 },
+  {'name': 'Illinois', 'population': 12	}
 ];
 
-var edges = [
-  {'source': '1', 'target': '2', 'weight':20 },
-  {'source': '2', 'target': '3', 'weight':20 },
-  {'source': '3', 'target': '4', 'weight':20 },
-  {'source': '4', 'target': '5', 'weight':20 },
-  {'source': '5', 'target': '1', 'weight':20}
-];
+var svg = d3.select('svg');
+var rectangles = svg.selectAll('rect')
+                    .data(datapoints)
+                    .enter()
+                    .append('rect')
+                    .attr('x', 75)
+                    .attr('y', function(d, i) { return i * 30; })
+                    .attr('height', 20)
+                    .attr('width', function(d) { return d['population'] * 3 ; });
 
-  var force = d3.layout.force().nodes(nodes).links(edges)
-  .size([500,500])
-  .charge(-200)
-  .on("tick", updateNetwork);
-
-  d3.select("svg").selectAll("line")
-  .data(edges)
-  .enter()
-  .append("line")
-  .style("stroke-width", "2px")
-  .style("stroke", function (d) {return d.reciprocal ? "#66CCCC" : "#996666"});
-
-  d3.select("svg").selectAll("circle")
-  .data(nodes)
-  .enter()
-  .append("circle")
-  .style("fill", "#FFFF99")
-  .style("stroke", "#666633")
-  .style("stroke-width", "1px")
-  .attr("r", 5)
-  .call(force.drag());
-
-  force.start();
-
-  function updateNetwork() {
-    d3.select("svg").selectAll("line")
-      .attr("x1", function (d) {return d.source.x})
-      .attr("x2", function (d) {return d.target.x})
-      .attr("y1", function (d) {return d.source.y})
-      .attr("y2", function (d) {return d.target.y});
-
-    d3.select("svg").selectAll("circle")
-      .attr("cx", function (d) {return d.x})
-      .attr("cy", function (d) {return d.y});
-  }
+var annotations = svg.selectAll('text')
+                    .data(datapoints)
+                    .enter()
+                    .append('text')
+                    .attr('x', 65)
+                    .attr('y', function(d, i) { return i * 30 + 15; })
+                    .text(function(d) { return d['name']; })
+                    .attr('font-size', 12)
+                    .attr('text-anchor', 'end');
 
 </script>
