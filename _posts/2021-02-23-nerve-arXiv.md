@@ -115,14 +115,4 @@ var rectangles = svg.selectAll('circle')
 		    .style('stroke', 'blue')
 		    .style('stroke-width', '3px')
 
-var annotations = svg.selectAll('text')
-                    .data(datapoints)
-                    .enter()
-                    .append('text')
-                    .attr('x', 65)
-                    .attr('y', function(d, i) { return i * 30 + 15; })
-                    .text(function(d) { return d['name']; })
-                    .attr('font-size', 12)
-                    .attr('text-anchor', 'end');
-
 </script>
