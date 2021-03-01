@@ -115,11 +115,11 @@ var rectangles = svg.selectAll('circle')
 		    .style("opacity", 0.5)
 		  
 var edges = [
-  {'start': 'New York','end': 'Texas', 'x': 110, 'y': 10	},
-  {'start': 'Texas','end': 'California', 'x': 110, 'y': 20 },
-  {'start': 'California','end': 'Florida', 'x': 100, 'y': 30 },
-  {'start': 'Florida','end': 'Illinois', 'x': 120, 'y': 30 },
-  {'start': 'Illinois','end': 'New York', 'x': 110, 'y': 40	}
+  {'source': 'New York','target': 'Texas', 'x': 110, 'y': 10	},
+  {'source': 'Texas','target': 'California', 'x': 110, 'y': 20 },
+  {'source': 'California','target': 'Florida', 'x': 100, 'y': 30 },
+  {'source': 'Florida','target': 'Illinois', 'x': 120, 'y': 30 },
+  {'source': 'Illinois','target': 'New York', 'x': 110, 'y': 40	}
 ];
 		  
 var rectangles = svg.selectAll('line')
@@ -128,6 +128,5 @@ var rectangles = svg.selectAll('line')
   .append("line")
   .style("stroke-width", "1px")
   .style("stroke", "#CC9999")
-  .attr("marker-end", "url(#Triangle)");
 
 </script>
