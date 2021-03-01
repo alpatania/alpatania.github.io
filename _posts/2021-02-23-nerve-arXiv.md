@@ -92,7 +92,10 @@ div.example {
 	.style('stroke-width', '3px')
   </script>-->
 
+<div>
 <svg height="200" width="500"></svg>
+</div>
+
 
 <script>
 	
@@ -111,13 +114,6 @@ var edges = [
   {'source': '4', 'target': '5', 'weight':20 },
   {'source': '5', 'target': '1', 'weight':20}
 ];
-
-var drawEdges= d3.select("svg").selectAll("line")
-  .data(edges)
-  .enter()
-  .append("line")
-  .style("stroke-width", "2px")
-  .style("stroke", function (d) {return d.reciprocal ? "#66CCCC" : "#996666"});
 
   var force = d3.layout.force().nodes(nodes).links(edges)
   .size([500,500])
