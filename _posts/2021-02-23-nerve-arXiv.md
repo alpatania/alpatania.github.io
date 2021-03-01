@@ -92,9 +92,9 @@ div.example {
 	.style('stroke-width', '3px')
   </script>-->
 
+<svg height="200" width="500"></svg>
+
 <script>
-  var svg = d3.select('#example')
-		.append('svg')
 
 function createNetwork() {
   var nodeHash = {};
