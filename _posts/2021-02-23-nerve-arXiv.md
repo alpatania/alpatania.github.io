@@ -130,14 +130,14 @@ function createForceNetwork(nodes, edges) {
   .charge(-200)
   .on("tick", updateNetwork);
 
-  svg.selectAll("line")
+  d3.select("svg").selectAll("line")
   .data(edges)
   .enter()
   .append("line")
   .style("stroke-width", "2px")
   .style("stroke", function (d) {return d.reciprocal ? "#66CCCC" : "#996666"});
 
-  svg.selectAll("circle")
+  d3.select("svg").selectAll("circle")
   .data(nodes)
   .enter()
   .append("circle")
@@ -150,13 +150,13 @@ function createForceNetwork(nodes, edges) {
   force.start();
 
   function updateNetwork() {
-    svg.selectAll("line")
+    d3.select("svg").selectAll("line")
       .attr("x1", function (d) {return d.source.x})
       .attr("x2", function (d) {return d.target.x})
       .attr("y1", function (d) {return d.source.y})
       .attr("y2", function (d) {return d.target.y});
 
-    svg.selectAll("circle")
+    d3.select("svg").selectAll("circle")
       .attr("cx", function (d) {return d.x})
       .attr("cy", function (d) {return d.y});
   }
