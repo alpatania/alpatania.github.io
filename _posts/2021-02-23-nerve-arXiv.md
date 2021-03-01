@@ -95,31 +95,24 @@ div.example {
 <svg height="200" width="500"></svg>
 
 <script>
-
-function createNetwork() {
-  var nodeHash = {};
-  var edgeHash = {};
-  var nodes = [];
-  var edges = [];
-  
-  nodeHash["1"] = {'id': "1", 'label': "1"};
-  nodeHash["2"] = {'id': "2", 'label': "2"};
-  nodeHash["3"] = {'id': "3", 'label': "3"};
-  nodes.push(nodeHash["1"]);
-  nodes.push(nodeHash["2"]);
-  nodes.push(nodeHash["3"]);
-  
-  var newEdge = {source: nodeHash["1"], target: nodeHash["2"], weight: "10"};
-  edgeHash["1" + "-" + "2"] = newEdge;
-  edges.push(newEdge);
 	
-  var newEdge = {source: nodeHash["2"], target: nodeHash["3"], weight: "10"};
-  edgeHash["2" + "-" + "3"] = newEdge;
-  edges.push(newEdge);
-  
- //is it reciprocal?
-  createForceNetwork(nodes, edges);
-}
+var nodes = [
+  {'id': '1', 'label': '1' },
+  {'id': '2', 'label': '2' },
+  {'id': '3', 'label': '3' },
+  {'id': '4', 'label': '4' },
+  {'id': '5', 'label': '5'}
+];
+
+var edges = [
+  {'source': '1', 'target': '2', 'weight':20 },
+  {'source': '2', 'target': '3', 'weight':20 },
+  {'source': '3', 'target': '4', 'weight':20 },
+  {'source': '4', 'target': '5', 'weight':20 },
+  {'source': '5', 'target': '1', 'weight':20}
+];
+
+createForceNetwork(nodes, edges);
 
 function createForceNetwork(nodes, edges) {
 
@@ -164,5 +157,4 @@ function createForceNetwork(nodes, edges) {
 
 
 }
-createNetwork() ;
 </script>
