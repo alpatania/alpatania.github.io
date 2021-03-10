@@ -115,11 +115,11 @@ var rectangles = svg.selectAll('circle')
 		    .style("opacity", 0.5)
 		  
 var edges = [
-  {'source': 'New York','target': 'Texas', 'x': 110, 'y': 10	},
-  {'source': 'Texas','target': 'California', 'x': 110, 'y': 20 },
-  {'source': 'California','target': 'Florida', 'x': 100, 'y': 30 },
-  {'source': 'Florida','target': 'Illinois', 'x': 120, 'y': 30 },
-  {'source': 'Illinois','target': 'New York', 'x': 110, 'y': 40	}
+  {'source': 'New York','target': 'Texas'},
+  {'source': 'Texas','target': 'California'},
+  {'source': 'California','target': 'Florida'},
+  {'source': 'Florida','target': 'Illinois' },
+  {'source': 'Illinois','target': 'New York'}
 ];
 		  
 var rectangles = svg.selectAll('line')
