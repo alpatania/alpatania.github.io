@@ -8,37 +8,6 @@ tags:
   - pre-print
 ---
 <a href="https://arxiv.org/abs/2102.11437"> Nerve theorems for fixed points of neural networks</a>  
-<p>
-  Nonlinear network dynamics are notoriously difficult to understand. Here we study a class of recurrent neural networks called combinatorial threshold-linear networks (CTLNs) whose dynamics are determined by the structure of a directed graph. They are a special case of TLNs, a popular framework for modeling neural activity in computational neuroscience.  
-  
-  In prior work, CTLNs were found to be surprisingly tractable mathematically. For small networks, the fixed points of the network dynamics can often be completely determined via a series of {\it graph rules} that can be applied directly to the underlying graph.  
-  
-  For larger networks, it remains a challenge to understand how the global structure of the network interacts with local properties. In this work, we propose a method of covering graphs of CTLNs with a set of smaller {\it directional graphs} that reflect the local flow of activity. While directional graphs may or may not have a feedforward architecture, their fixed point structure is indicative of feedforward dynamics.  
-  
-  The combinatorial structure of the graph cover is captured by the {\it nerve} of the cover. The nerve is a smaller, simpler graph that is more amenable to graphical analysis. We present three nerve theorems that provide strong constraints on the fixed points of the underlying network from the structure of the nerve. We then illustrate the power of these theorems with some examples.  
-  
-  Remarkably, we find that the nerve not only constrains the fixed points of CTLNs, but also gives insight into the transient and asymptotic dynamics. This is because the flow of activity in the network tends to follow the edges of the nerve.
-</p> 
-
-## What are CTLNs?
-<p>Combinatorial threshold-linear networks (CTLNs) are competitive TLNs where the matrix W is determined by a graph G.
-The dynamics is defined on the nodes of the network by the following ordinary differential equation:
-</p>
-
-
-## Fixed points
-<p>
-  A fixed point is a point in the state space where the rate of change is 0 for all xi.</p>
-
-## The idea of a nerve
-<p>
-  Directional graphs are graph where we can isolate all the possible subroups of nodes that can support fixed points.<\br>
-Knowing which nodes can support fixed points give an intuition of where the dynamics of a network will flow.
-We know that if a subgroup of nodes of the network don't allow a fixed point, then the dynamics will never stall in them and will try to always move away from them. </p>
-
-## The Theorems
-
-
 <script src="https://d3js.org/d3.v6.min.js"></script>
 <svg height="200" width="500"></svg>
 <script>
@@ -48,16 +17,16 @@ We know that if a subgroup of nodes of the network don't allow a fixed point, th
     var colors = d3.scale.category10();
     var dataset = {
     nodes: [
-	    {name: "Adam"},
-	    {name: "Bob"},
-	    {name: "Carrie"},
-	    {name: "Donovan"},
-	    {name: "Edward"},
-	    {name: "Felicity"},
-	    {name: "George"},
-	    {name: "Hannah"},
-	    {name: "Iris"},
-	    {name: "Jerry"}
+	    {name: 'Adam'},
+	    {name: 'Bob'},
+	    {name: 'Carrie'},
+	    {name: 'Donovan'},
+	    {name: 'Edward'},
+	    {name: 'Felicity'},
+	    {name: 'George'},
+	    {name: 'Hannah'},
+	    {name: 'Iris'},
+	    {name: 'Jerry'}
 	    ],
     edges: [
     {source: 0, target: 1},
@@ -88,30 +57,30 @@ We know that if a subgroup of nodes of the network don't allow a fixed point, th
       .data(dataset.edges)
       .enter()
       .append("line")
-      .attr("id",function(d,i) {return 'edge'+i})
+      .attr('id',function(d,i) {return 'edge'+i})
       .attr('marker-end','url(#arrowhead)')
-      .style("stroke","#ccc")
-      .style("pointer-events", "none");
+      .style('stroke',"#ccc")
+      .style('pointer-events', "none");
     var nodes = svg.selectAll("circle")
       .data(dataset.nodes)
       .enter()
       .append("circle")
-      .attr({"r":15})
-      .style("fill",function(d,i){return colors(i);})
+      .attr({'r':15})
+      .style('fill',function(d,i){return colors(i);})
       .call(force.drag);
     var nodelabels = svg.selectAll(".nodelabel") 
        .data(dataset.nodes)
        .enter()
        .append("text")
-       .attr({"x":function(d){return d.x;},
-              "y":function(d){return d.y;},
-              "class":"nodelabel",
-              "stroke":"black"})
+       .attr({'x':function(d){return d.x;},
+              'y':function(d){return d.y;},
+              'class':'nodelabel',
+              'stroke':"black"})
        .text(function(d){return d.name;});
     var edgepaths = svg.selectAll(".edgepath")
         .data(dataset.edges)
         .enter()
-        .append('path')
+        .append("path")
         .attr({'d': function(d) {return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y},
                'class':'edgepath',
                'fill-opacity':0,
