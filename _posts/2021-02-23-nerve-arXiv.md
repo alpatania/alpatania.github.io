@@ -8,13 +8,13 @@ tags:
   - pre-print
 ---
 <a href="https://arxiv.org/abs/2102.11437"> Nerve theorems for fixed points of neural networks</a>  
-<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
 <svg></svg>
 <script>
     var w = 1000;
     var h = 600;
     var linkDistance=200;
-    var colors = d3.scaleOrdinal(d3.schemeCategory10);
+    var colors = d3.scale.category10(); <!--d3.scaleOrdinal(d3.schemeCategory10);-->
     var dataset = {
     nodes: [
 	    {name: 'Adam'},
