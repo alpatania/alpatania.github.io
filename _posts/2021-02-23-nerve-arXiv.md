@@ -9,7 +9,7 @@ tags:
 ---
 <a href="https://arxiv.org/abs/2102.11437"> Nerve theorems for fixed points of neural networks</a>  
 <script src="https://d3js.org/d3.v6.min.js"></script>
-<svg height="200" width="500"></svg>
+<svg></svg>
 <script>
     var w = 1000;
     var h = 600;
@@ -128,7 +128,7 @@ tags:
         });
         nodelabels.attr("x", function(d) { return d.x; }) 
                   .attr("y", function(d) { return d.y; });
-        edgepaths.attr('d', function(d) { var path='M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y;
+        edgepaths.attr("d", function(d) { var path='M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y;
                                            return path});       
         edgelabels.attr('transform',function(d,i){
             if (d.target.x<d.source.x){
