@@ -96,11 +96,11 @@ div.example {
 
 <script>
 var datapoints = [
-  {'name': 'New York', 'x': 110, 'y': 10,'id'=1},
-  {'name': 'Texas', 'x': 110, 'y': 20, 'id'=2},
-  {'name': 'California', 'x': 100, 'y': 30, 'id'=3},
-  {'name': 'Florida', 'x': 120, 'y': 30, 'id'=4},
-  {'name': 'Illinois', 'x': 110, 'y': 40, 'id'=5}
+  {'name': 'New York', 'x': 110, 'y': 10},
+  {'name': 'Texas', 'x': 110, 'y': 20},
+  {'name': 'California', 'x': 100, 'y': 30},
+  {'name': 'Florida', 'x': 120, 'y': 30,
+  {'name': 'Illinois', 'x': 110, 'y': 40}
 ];
 
 var svg = d3.select('svg');
@@ -122,14 +122,6 @@ var edges = [
   {'source': 4,'target': 0}
 ];
 
-<!-- var edges = [
-  {'source': 'New York','target': 'Texas'},
-  {'source': 'Texas','target': 'California'},
-  {'source': 'California','target': 'Florida'},
-  {'source': 'Florida','target': 'Illinois' },
-  {'source': 'Illinois','target': 'New York'}
-];-->
-		  
 var rectangles = svg.selectAll('line')
   .data(edges)
   .enter()
