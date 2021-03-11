@@ -38,95 +38,9 @@ We know that if a subgroup of nodes of the network don't allow a fixed point, th
 
 ## The Theorems
 
-<!--
-\\ defining a new div class
-
-<style>
-
-div.example {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.box {
-  font: 10px sans-serif;
-}
-
-.box line,
-.box rect,
-.box circle {
-  fill: #111;
-  stroke: #000;
-  stroke-width: 1.5px;
-}
-
-.box .center {
-  stroke-dasharray: 3,3;
-}
-
-.box .outlier {
-  fill: none;
-  stroke: #ccc;
-}
-
-</style>-->
 
 <script src="https://d3js.org/d3.v6.min.js"></script>
-<!--<script src="http://bl.ocks.org/mbostock/raw/4061502/0a200ddf998aa75dfdb1ff32e16b680a15e5cb01/box.js"></script>-->
-
-<!--<script>
-<div id='example'>
-</div>
-  var width = 400, height = 400;
-  var svg = d3.select('#example')
-		.append('svg')
-		.attr('width', width)
-		.attr('height', height);
-  var vectorcircle = svg.append('circle')
-	.attr('cx', width/2)
-	.attr('cy', height/2)
-	.attr('r', 100)
-	.style('fill', 'orange')
-	.style('stroke', 'blue')
-	.style('stroke-width', '3px')
-  </script>-->
-
 <svg height="200" width="500"></svg>
-
-<!--
-<script>
-var datapoints = [
-  {'name': 'New York', 'x': 110, 'y': 10},
-  {'name': 'Texas', 'x': 110, 'y': 20},
-  {'name': 'California', 'x': 100, 'y': 30},
-  {'name': 'Florida', 'x': 120, 'y': 30,
-  {'name': 'Illinois', 'x': 110, 'y': 40}
-];
-var svg = d3.select('svg');
-var rectangles = svg.selectAll('circle')
-                    .data(datapoints)
-                    .enter()
-                    .append('circle')
-                    .attr('cx', function(d) { return d['x'] * 3 ; })
-                    .attr('cy', function(d) { return d['y'] * 3 ; })
-                    .attr('r', 5)
-		    .style('fill', 'orange')
-		    .style("opacity", 0.5)	  
-var edges = [
-  {'source': 0,'target': 1},
-  {'source': 1,'target': 2},
-  {'source': 2,'target': 3},
-  {'source': 3,'target': 4},
-  {'source': 4,'target': 0}
-];
-var rectangles = svg.selectAll('line')
-  .data(edges)
-  .enter()
-  .append("line")
-  .style("stroke-width", "1px")
-  .style("stroke", "#CC9999")
-</script>
--->
-
 <script>
     var w = 1000;
     var h = 600;
