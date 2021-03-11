@@ -184,7 +184,7 @@ var rectangles = svg.selectAll('line')
       .append("circle")
       .attr({"r":15})
       .style("fill",function(d,i){return colors(i);})
-      .call(force.drag):
+      .call(force.drag);
     var nodelabels = svg.selectAll(".nodelabel") 
        .data(dataset.nodes)
        .enter()
