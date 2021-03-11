@@ -109,7 +109,6 @@ tags:
                'viewBox':'-0 -5 10 10',
                'refX':25,
                'refY':0,
-               //'markerUnits':'strokeWidth',
                'orient':'auto',
                'markerWidth':10,
                'markerHeight':10,
@@ -130,7 +129,6 @@ tags:
         nodelabels.attr("x", function(d) { return d.x; }) 
                   .attr("y", function(d) { return d.y; });
         edgepaths.attr('d', function(d) { var path='M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y;
-                                           //console.log(d)
                                            return path});       
         edgelabels.attr('transform',function(d,i){
             if (d.target.x<d.source.x){
