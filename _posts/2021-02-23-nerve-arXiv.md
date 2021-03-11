@@ -70,7 +70,7 @@ div.example {
 
 </style>-->
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3.v6.min.js"></script>
 <!--<script src="http://bl.ocks.org/mbostock/raw/4061502/0a200ddf998aa75dfdb1ff32e16b680a15e5cb01/box.js"></script>-->
 
 <!--<script>
