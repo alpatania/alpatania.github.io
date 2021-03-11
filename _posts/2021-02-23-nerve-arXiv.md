@@ -76,13 +76,11 @@ div.example {
 <!--<script>
 <div id='example'>
 </div>
-
   var width = 400, height = 400;
   var svg = d3.select('#example')
 		.append('svg')
 		.attr('width', width)
 		.attr('height', height);
-  
   var vectorcircle = svg.append('circle')
 	.attr('cx', width/2)
 	.attr('cy', height/2)
@@ -103,7 +101,6 @@ var datapoints = [
   {'name': 'Florida', 'x': 120, 'y': 30,
   {'name': 'Illinois', 'x': 110, 'y': 40}
 ];
-
 var svg = d3.select('svg');
 var rectangles = svg.selectAll('circle')
                     .data(datapoints)
@@ -113,8 +110,7 @@ var rectangles = svg.selectAll('circle')
                     .attr('cy', function(d) { return d['y'] * 3 ; })
                     .attr('r', 5)
 		    .style('fill', 'orange')
-		    .style("opacity", 0.5)
-		  
+		    .style("opacity", 0.5)	  
 var edges = [
   {'source': 0,'target': 1},
   {'source': 1,'target': 2},
@@ -122,59 +118,49 @@ var edges = [
   {'source': 3,'target': 4},
   {'source': 4,'target': 0}
 ];
-
 var rectangles = svg.selectAll('line')
   .data(edges)
   .enter()
   .append("line")
   .style("stroke-width", "1px")
   .style("stroke", "#CC9999")
-
 </script>
 -->
 
 <script>
-
     var w = 1000;
     var h = 600;
     var linkDistance=200;
-
     var colors = d3.scale.category10();
-
     var dataset = {
-
     nodes: [
-    {name: "Adam"},
-    {name: "Bob"},
-    {name: "Carrie"},
-    {name: "Donovan"},
-    {name: "Edward"},
-    {name: "Felicity"},
-    {name: "George"},
-    {name: "Hannah"},
-    {name: "Iris"},
-    {name: "Jerry"}
-    ],
+	    {name: "Adam"},
+	    {name: "Bob"},
+	    {name: "Carrie"},
+	    {name: "Donovan"},
+	    {name: "Edward"},
+	    {name: "Felicity"},
+	    {name: "George"},
+	    {name: "Hannah"},
+	    {name: "Iris"},
+	    {name: "Jerry"}
+	    ],
     edges: [
     {source: 0, target: 1},
-    {source: 0, target: 2},
-    {source: 0, target: 3},
-    {source: 0, target: 4},
-    {source: 1, target: 5},
-    {source: 2, target: 5},
-    {source: 2, target: 5},
-    {source: 3, target: 4},
-    {source: 5, target: 8},
-    {source: 5, target: 9},
-    {source: 6, target: 7},
-    {source: 7, target: 8},
-    {source: 8, target: 9}
-    ]
-    };
-
- 
+	    {source: 0, target: 2},
+	    {source: 0, target: 3},
+	    {source: 0, target: 4},
+	    {source: 1, target: 5},
+	    {source: 2, target: 5},
+	    {source: 2, target: 5},
+	    {source: 3, target: 4},
+	    {source: 5, target: 8},
+	    {source: 5, target: 9},
+	    {source: 6, target: 7},
+	    {source: 7, target: 8},
+	    {source: 8, target: 9}
+	    ]};
     var svg = d3.select("svg").attr({"width":w,"height":h});
-
     var force = d3.layout.force()
         .nodes(dataset.nodes)
         .links(dataset.edges)
@@ -184,9 +170,6 @@ var rectangles = svg.selectAll('line')
         .theta(0.1)
         .gravity(0.05)
         .start();
-
- 
-
     var edges = svg.selectAll("line")
       .data(dataset.edges)
       .enter()
@@ -195,16 +178,13 @@ var rectangles = svg.selectAll('line')
       .attr('marker-end','url(#arrowhead)')
       .style("stroke","#ccc")
       .style("pointer-events", "none");
-    
     var nodes = svg.selectAll("circle")
       .data(dataset.nodes)
       .enter()
       .append("circle")
       .attr({"r":15})
       .style("fill",function(d,i){return colors(i);})
-      .call(force.drag)
-
-
+      .call(force.drag):
     var nodelabels = svg.selectAll(".nodelabel") 
        .data(dataset.nodes)
        .enter()
@@ -214,7 +194,6 @@ var rectangles = svg.selectAll('line')
               "class":"nodelabel",
               "stroke":"black"})
        .text(function(d){return d.name;});
-
     var edgepaths = svg.selectAll(".edgepath")
         .data(dataset.edges)
         .enter()
@@ -227,7 +206,6 @@ var rectangles = svg.selectAll('line')
                'stroke':'red',
                'id':function(d,i) {return 'edgepath'+i}})
         .style("pointer-events", "none");
-
     var edgelabels = svg.selectAll(".edgelabel")
         .data(dataset.edges)
         .enter()
@@ -239,13 +217,10 @@ var rectangles = svg.selectAll('line')
                'dy':0,
                'font-size':10,
                'fill':'#aaa'});
-
     edgelabels.append('textPath')
         .attr('xlink:href',function(d,i) {return '#edgepath'+i})
         .style("pointer-events", "none")
         .text(function(d,i){return 'label '+i});
-
-
     svg.append('defs').append('marker')
         .attr({'id':'arrowhead',
                'viewBox':'-0 -5 10 10',
@@ -260,27 +235,20 @@ var rectangles = svg.selectAll('line')
             .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
             .attr('fill', '#ccc')
             .attr('stroke','#ccc');
-     
-
     force.on("tick", function(){
-
         edges.attr({"x1": function(d){return d.source.x;},
                     "y1": function(d){return d.source.y;},
                     "x2": function(d){return d.target.x;},
                     "y2": function(d){return d.target.y;}
         });
-
         nodes.attr({"cx":function(d){return d.x;},
                     "cy":function(d){return d.y;}
         });
-
         nodelabels.attr("x", function(d) { return d.x; }) 
                   .attr("y", function(d) { return d.y; });
-
         edgepaths.attr('d', function(d) { var path='M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y;
                                            //console.log(d)
                                            return path});       
-
         edgelabels.attr('transform',function(d,i){
             if (d.target.x<d.source.x){
                 bbox = this.getBBox();
@@ -293,5 +261,4 @@ var rectangles = svg.selectAll('line')
                 }
         });
     });
-
 </script>
