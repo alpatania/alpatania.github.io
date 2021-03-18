@@ -27,3 +27,46 @@ Knowing which nodes can support fixed points give an intuition of where the dyna
 We know that if a subgroup of nodes of the network don't allow a fixed point, then the dynamics will never stall in them and will try to always move away from them. </p>
 
 ## The Theorems
+
+
+
+<script src="/assets/js/konami-code.js"></script>
+<style>
+	#fox
+	{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 156px;
+		height: 236px;
+		background: url("/assets/img/fox.png");
+		background-position: right top;
+		background-repeat: no-repeat;
+		z-index: 5000;
+	}
+</style>
+<div id="fox">
+</div>
+
+<script>
+$("#fox").hide();
+new KonamiCode(function() {
+	display_fox();
+});
+
+function display_fox(){
+	$("#fox").show();
+	open_eyes();
+}
+
+// display_fox();
+
+function open_eyes(){
+	$("#fox").css("background-position", "right top");
+	setTimeout(function(){ close_eyes(); }, 4000);
+}
+function close_eyes(){
+	$("#fox").css("background-position", "left top");
+	setTimeout(function(){ open_eyes(); }, 250);
+}
+</script>
