@@ -1,10 +1,10 @@
 ---
-title: "Teaching experience 2"
+title: "Topology - MATH 254"
 collection: teaching
-type: "Workshop"
-permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
-date: 2015-01-01
+type: "Undergraduate course"
+permalink: /teaching/2022-spring
+venue: "University of Vermont"
+date: 2022-01-14
 location: "City, Country"
 ---
 
