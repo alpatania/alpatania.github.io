@@ -8,13 +8,28 @@ date: 2022-01-14
 location: "City, Country"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+Introductory course on point set topology. 
 
-Heading 1
+Schedule
+======
+WEEK 1 - Welcome to M254, sets  
+WEEK 2 - logic statements, equivalence relation  
+WEEK 3 - order relation, topological space  
+WEEK 4 - basis for a topology, theorem always exists a basis  
+WEEK 5 - finer/coarser, induced topology  
+WEEK 6 - order topology, interior/closure  
+WEEK 7 - closure construction theorems  
+WEEK 8 - limit points, separation  
+WEEK 9 - continuous func definitions, homeomorphism  
+WEEK 10 - continuous func construction, metric topology  
+WEEK 11 - sequence convergence, uniform convergence  
+WEEK 12 - connected space, intermediate value theorem  
+WEEK 13 - compactness, compact and Hausdorff  
+WEEK 14 - extreme value theorem, uniform continuity theorem  
+WEEK 15 - new definition of compacness, semester review  
+
+Reading material
 ======
 
-Heading 2
-======
-
-Heading 3
+Lecture notes
 ======
