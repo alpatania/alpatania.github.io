@@ -10,6 +10,7 @@ location: "City, Country"
 
 Introductory course on point set topology. 
 
+
 Schedule
 ======
 WEEK 1 - Welcome to M254, sets  
