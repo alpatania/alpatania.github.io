@@ -37,7 +37,10 @@
              </h3> 
       {% elsif post.collection == 'talks' %}
             <h3 class="archive__item-title" itemprop="headline"  style="text-decoration: none;">
-              {{ title }}{%if post.pdfurl %} - <a href="{{ base_path }}{{ post.pdfurl }}" rel="permalink" style="color:#52adc8;">Slides</a>{% endif %}
+              {{ title }}
+              {%if post.pdfurl %} - <a href="{{ base_path }}{{ post.pdfurl }}" rel="permalink" style="color:#52adc8;">Slides (pdf)</a>{% endif %}
+              {%if post.ppturl %} - <a href="{{ post.ppturl }}" rel="permalink" style="color:#52adc8;">Slides (ppt)</a>{% endif %}
+            </h3>
             </h3>
         {% else %}
             <h3 class="archive__item-title" itemprop="headline">
