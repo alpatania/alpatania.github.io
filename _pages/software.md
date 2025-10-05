@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "Code"
-permalink: /code/
+title: "Software"
+permalink: /software/
 bg_img: 'https://alpatania.github.io/images/bg_code.png'
 author_profile: true
 ---
