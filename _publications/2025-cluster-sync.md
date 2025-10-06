@@ -1,6 +1,6 @@
 ---
 title: "Cluster Synchronization via Graph Laplacian Eigenvectors"
-collection: publications
+label: publications
 permalink: /publication/2025-cluster-sync
 date: 2025-03-01
 venue: 'arXiv preprint'
