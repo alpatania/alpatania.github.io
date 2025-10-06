@@ -1,0 +1,13 @@
+---
+title: "Exact and rapid linear clustering of networks with dynamic programming"
+label: publications
+permalink: /publication/2023-clustering
+date: 2023-07-01
+venue: "Proceedings of the Royal Society A"
+paperurl: 'https://doi.org/10.1098/rspa.2023.0159'
+citation: 'Patania, A., Allard, A., & Young, J.G. (2023). Exact and rapid linear clustering of networks with dynamic programming. Proceedings of the Royal Society A, 479(2275), 20230159.'
+---
+
+Efficient dynamic programming approach for exact network clustering with guaranteed optimality in linear time.
+
+[Download paper here](https://doi.org/10.1098/rspa.2023.0159)
