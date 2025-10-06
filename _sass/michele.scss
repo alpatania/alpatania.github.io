@@ -52,3 +52,71 @@ body.About {
 .page__date p {
 	font-size: 12px;
 }
+
+/* Add this to _sass/_page.scss at the bottom, or create a new file _sass/_custom.scss */
+
+/* Reduce font size for better readability */
+.page__content {
+  font-size: 0.9em; /* Smaller base font */
+  line-height: 1.5; /* Tighter line height */
+}
+
+/* Reduce spacing between paragraphs */
+.page__content p {
+  margin-bottom: 0.8em; /* Reduce from default (usually 1.5em or more) */
+}
+
+/* Reduce spacing before headers */
+.page__content h2 {
+  margin-top: 1.5em; /* Reduce top margin */
+  margin-bottom: 0.5em; /* Reduce bottom margin */
+  font-size: 1.5em; /* Slightly smaller h2 */
+}
+
+.page__content h3 {
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+  font-size: 1.2em; /* Slightly smaller h3 */
+}
+
+.page__content h4 {
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  font-size: 1em;
+}
+
+/* Tighten up list spacing */
+.page__content ul,
+.page__content ol {
+  margin-bottom: 0.8em;
+}
+
+.page__content li {
+  margin-bottom: 0.3em; /* Reduce space between list items */
+}
+
+/* Reduce spacing in the archive (publications, talks, etc.) */
+.archive__item {
+  margin-bottom: 1em; /* Reduce from default */
+}
+
+/* Make links in publications more compact */
+.archive__item-title {
+  margin-bottom: 0.25em;
+  font-size: 1em;
+}
+
+.archive__item-excerpt {
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+}
+
+/* Tighten horizontal rules */
+.page__content hr {
+  margin: 1.5em 0; /* Reduce from default (usually 2-3em) */
+}
+
+/* Optional: Make the overall max-width narrower for better readability */
+.page {
+  max-width: 900px; /* Narrower than default (~1024px) */
+}
