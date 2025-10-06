@@ -23,9 +23,9 @@ Complex systems often exhibit interactions that go beyond simple pairwise relati
 - **Dynamics on Simplicial Complexes**: Understanding synchronization and collective behaviors in systems with multi-way interactions
 
 **Representative Publications:**
-- [The Topology of Synergy](/publication/2025-topology-synergy) (2025) - **NEW**
-- [Cluster Synchronization via Graph Laplacian](/publication/2025-cluster-sync) (2025) - **NEW**
-- [Networks Beyond Pairwise Interactions](https://doi.org/10.1016/j.physrep.2020.05.004) (2020) - **Highly Cited Review**
+- [The Topology of Synergy](/publication/2025-topology-synergy) (2025) 
+- [Cluster Synchronization via Graph Laplacian](/publication/2025-cluster-sync) (2025)
+- [Networks Beyond Pairwise Interactions](https://doi.org/10.1016/j.physrep.2020.05.004) (2020)
 - [Simplicial Configuration Model](/publication/2017-scm) (2017)
 - [The Shape of Collaborations](/publication/2017-shape-collaborations) (2017)
 
