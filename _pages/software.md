@@ -32,7 +32,7 @@ A comprehensive Python package for the representation, manipulation, and analysi
 - The package is in **active development** with regular updates and community contributions
 
 **Links:**
-- [GitHub Repository](https://github.com/xgi-org/xgi) ⭐ 250+ stars
+- [GitHub Repository](https://github.com/xgi-org/xgi) 
 - [Documentation](https://xgi.readthedocs.io/)
 - [Paper](https://joss.theoj.org/papers/10.21105/joss.05162)
 - [Tutorials](https://xgi.readthedocs.io/en/stable/getting_started.html)
