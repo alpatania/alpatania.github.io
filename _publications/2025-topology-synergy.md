@@ -1,6 +1,6 @@
 ---
 title: "The topology of synergy: linking topological and information-theoretic approaches to higher-order interactions in complex systems"
-collection: publications
+label: pre-prints
 permalink: /publication/2025-topology-synergy
 date: 2025-04-01
 venue: 'arXiv preprint'
